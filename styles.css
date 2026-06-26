@@ -219,6 +219,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background:
     url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&q=80')
     center/cover no-repeat;
+  background-position: center center;
+}
+
+@media (max-width: 768px) {
+  .hero__bg {
+    background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=1400&fit=crop&q=80');
+    background-position: center top;
+  }
 }
 
 .hero__overlay {
@@ -231,6 +239,17 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
     rgba(13,27,42,.55) 100%
   );
   z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .hero__overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(13,27,42,.88) 0%,
+      rgba(13,27,42,.80) 50%,
+      rgba(13,27,42,.70) 100%
+    );
+  }
 }
 
 .hero__inner {
