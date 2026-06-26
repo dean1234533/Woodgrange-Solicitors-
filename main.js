@@ -10,11 +10,16 @@ const navLinks = document.getElementById('navLinks');
 
 burger.addEventListener('click', () => {
   navLinks.classList.toggle('open');
+  burger.classList.toggle('open');
   burger.setAttribute('aria-expanded', navLinks.classList.contains('open'));
 });
 
 navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  });
 });
 
 /* Scroll reveal */
