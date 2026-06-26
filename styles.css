@@ -226,6 +226,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background-repeat: no-repeat;
 }
 
+@media (max-width: 768px) {
+  .hero__bg {
+    background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&h=1600&fit=crop&crop=center&q=80');
+    background-position: center top;
+    background-size: cover;
+  }
+}
+
 .hero__overlay {
   position: absolute;
   inset: 0;
